@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.forms-buscar{
+  text-align: center;
+}
+
+#grid-contatos tbody {
+    cursor: pointer;
+  }
+
+  .alert {
+    padding: 10%;
+  }

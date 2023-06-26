@@ -1,0 +1,100 @@
+.input {
+  margin: 2.5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.error {
+  border: 1px solid red;
+}
+#success-msg {
+  color: #1e981e;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input {
+  align-content: center;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+.rating {
+  display: inline-block;
+  margin: 1.5rem;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  color: #ddd;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 2.5rem;
+}
+
+.rating input:checked ~ label {
+  color: #ffcc00;
+}
+
+label {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 30%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1.5rem 5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  .input {
+    font-size: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .rating {
+    margin: 2.5rem;
+  }
+
+  .rating label:before {
+    font-size: 5rem;
+  }
+
+  label {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  button {
+    padding: 2.5rem 7.5rem;
+    border-radius: 5rem;
+  }
+}

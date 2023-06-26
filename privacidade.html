@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/Sport Mark.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Política de privacidade</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="container">
+            <h1 class="mb-4 text-center">Política de Privacidade</h1>
+            <p>Esta política descreve como as informações pessoais são coletadas, usadas e compartilhadas quando você utiliza o nosso site de aluguel de quadras.</p>
+        
+            <h4>Informações que coletamos</h4>
+            <p>Quando você utiliza nosso site, podemos coletar as seguintes informações:</p>
+            <ul>
+              <li>Nome</li>
+              <li>Endereço de e-mail</li>
+              <li>Informações de contato</li>
+              <li>Informações de pagamento</li>
+            </ul>
+        
+            <h4>Como utilizamos suas informações</h4>
+            <p>Utilizamos as informações coletadas para:</p>
+            <ul>
+              <li>Processar seu pedido de aluguel de quadra</li>
+              <li>Enviar atualizações e informações sobre sua reserva</li>
+              <li>Entrar em contato com você para fins de suporte ao cliente</li>
+              <li>Melhorar nosso site e serviços</li>
+            </ul>
+        
+            <h4>Compartilhamento de informações</h4>
+            <p>Podemos compartilhar suas informações pessoais com:</p>
+            <ul>
+              <li>Parceiros de pagamento para processar suas transações</li>
+              <li>Empresas de serviços de hospedagem e armazenamento de dados</li>
+              <li>Autoridades legais, se exigido por lei</li>
+            </ul>
+        
+            <h4>Segurança</h4>
+            <p>Tomamos medidas de segurança para proteger suas informações pessoais e garantir que sejam tratadas de forma segura e de acordo com esta política de privacidade.</p>
+        
+            <h4>Seus direitos</h4>
+            <p>Você tem o direito de solicitar acesso, correção ou exclusão de suas informações pessoais. Entre em contato conosco para exercer esses direitos.</p>
+        
+            <h4>Alterações nesta política</h4>
+            <p>Podemos atualizar esta política de privacidade de tempos em tempos. Recomendamos que você revise periodicamente as alterações.</p>
+          </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Carregar o cabeçalho
+            $.get('header.html', (data) => {
+                $('header').html(data);
+                $('.pagina').html(`<div class = "border-bottom border-secondary">
+                                        <h5><a class = "text-decoration-none text-dark" href="index.html">Home </a> / Política de privacidade</h5>
+                                    </div>`);
+            });
+
+            // Carregar o rodapé
+            $('footer').load('footer.html');
+        });
+    </script>
+</body>
+</html>

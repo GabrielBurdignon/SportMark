@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contato.css">
+  <link rel="shortcut icon" href="img/Sport Mark.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <title>Central de Atendimento</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+      <div class="container">
+          <h1 class="text-center pb-2">Central de Atendimento</h1>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="accordion" id="accordionExample">
+                </div>
+                <div class="card mb-2">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed text-decoration-none text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Quais são os horários de funcionamento?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Estamos abertos de segunda a sexta, das 8h às 22h, e aos sábados e domingos, das 9h às 18h.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed text-decoration-none text-dark" type="button" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                        Como posso entrar em contato com o suporte?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Você pode entrar em contato com o nosso suporte ligando para o número fornecido ou enviando um email
+                      para support@sportmark.com.br
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Carregar o cabeçalho
+            $.get('header.html', (data) => {
+                $('header').html(data);
+                $('.pagina').html(`<div class = "border-bottom border-secondary">
+                                        <h5><a class = "text-decoration-none text-dark" href="index.html">Home </a> / Contatos</h5>
+                                    </div>`);
+            });
+
+            // Carregar o rodapé
+            $('footer').load('footer.html');
+
+            $(window).scroll(function () {
+              if ($(this).scrollTop() > 100) {
+                $('.contact-info').addClass('fade-in');
+              }
+            });
+        });
+    </script>
+</body>
+</html>

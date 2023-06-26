@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+  }
+
+  #mensagem {
+    height: 100px;
+  }
+
+  .help-section {
+    max-width: 600px;
+    background: white;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .help-section h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .help-section p {
+    margin-bottom: 20px;
+  }
+
+  .help-section .question {
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .help-section .question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .help-section .question.show::after {
+    transform: rotate(45deg);
+  }
+
+  .help-section .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .help-section .answer.show {
+    max-height: 500px;
+    transition: max-height 0.3s ease-in;
+  }
+
+  /* Animação personalizada */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

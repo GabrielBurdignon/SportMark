@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/Sport Mark.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Sport Mark</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="container nt-2">
+            <div class="row my-3">
+                <div class="col-4 pb-4">
+                    <div class="card shadow h-100 border-white pb-2">
+                        <img class="card-img-top" src="img/qdr1.jpg" alt="Card image cap" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ousadia Sport Center - BH</h5>
+                            <p class="card-text">Uma quadra moderna e tecnologicamente avançada, com um campo impecável
+                                e
+                                iluminação de alta qualidade.</p>
+                            <a href="avaliar.html" class="btn btn-success btn-animated mt-4">Avaliar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pb-4">
+                    <div class="card shadow h-100 border-white pb-2">
+                        <img class="card-img-top" src="img/qdr2.jpg" alt="Card image cap" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Centro Esportivo Gol a Gol</h5>
+                            <p class="card-text">Uma quadra ampla e vibrante, onde a paixão pelo futebol é palpável.</p>
+                            <a href="avaliar.html" class="btn btn-success btn-animated mt-5">Avaliar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pb-4">
+                    <div class="card shadow h-100 border-white pb-2">
+                        <img class="card-img-top" src="img/qdr3.jpg" alt="Card image cap" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Arena Bola no Pé</h5>
+                            <p class="card-text">Uma quadra lendária que carrega um histórico de grandes jogos e
+                                momentos
+                                memoráveis.</p>
+                            <a href="avaliar.html" class="btn btn-success btn-animated mt-5">Avaliar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-4 pb-4">
+                    <div class="card shadow h-100 border-white pb-2">
+                        <img class="card-img-top" src="img/qdr4.jpg" alt="Card image cap" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Esportivo Estrela do Futebol</h5>
+                            <p class="card-text">Uma quadra localizada em meio a um belo parque, oferecendo um ambiente
+                                sereno e natural para a prática do futebol.</p>
+                            <a href="avaliar.html" class="btn btn-success btn-animated mt-4">Avaliar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pb-4">
+                    <div class="card shadow h-100 border-white pb-2">
+                        <img class="card-img-top" src="img/qdr5.jpg" alt="Card image cap" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Estádio Futebol Mania</h5>
+                            <p class="card-text">Uma arena de futebol coberta e com instalações modernas para
+                                treinamentos e
+                                competições.</p>
+                            <a href="avaliar.html" class="btn btn-success btn-animated mt-5">Avaliar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 pb-4">
+                    <div class="card shadow h-100 border-white pb-2">
+                        <img class="card-img-top" src="img/qdr6.jpg" alt="Card image cap" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Estádio Futebol Mania</h5>
+                            <p class="card-text">Uma arena de futebol coberta e com instalações modernas para
+                                treinamentos e
+                                competições.</p>
+                            <a href="avaliar.html" class="btn btn-success btn-animated mt-5">Avaliar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Carregar o cabeçalho
+            $.get('header.html', (data) => {
+                $('header').html(data);
+                $('.pagina').html(`<div class = "border-bottom border-secondary">
+                                        <h5><a class = "text-decoration-none text-dark" href="index.html">Home </a> / Quadras</h5>
+                                    </div>`);
+            });
+
+            // Carregar o rodapé
+            $('footer').load('footer.html');
+        });
+    </script>
+</body>
+
+</html>

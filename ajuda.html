@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ajuda.css">
+    <link rel="shortcut icon" href="img/Sport Mark.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Ajuda</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-3 pb-5">
+                    <div class="help-section">
+                        <div class="suporte pt-3">
+                            <section>
+                                <h2 class="text-center">Suporte e Ajuda</h2>
+                                <p>Se você precisar de suporte ou ajuda, envie-nos uma mensagem detalhando sua consulta ou problema.</p>
+                                <p>Nossa equipe de suporte entrará em contato com você em breve.</p>
+                            </section>
+                        
+                            <section class="text-center">
+                                <form id="contactForm">
+                                    <h6 class="text-start pt-2">Nome:</h6>
+                                    <input type="text" id="name" class="d-block mx-auto form-control" required>
+
+                                    <h6 class="text-start pt-2">Email:</h6>
+                                    <input type="email" id="email" class="d-block mx-auto form-control" required>
+
+                                    <h6 class="text-start pt-2">Mensagem:</h6>
+                                    <textarea type="text" id="mensagem" class="d-block mx-auto form-control" rows="10" required></textarea>
+
+                                    <button type="submit" class="btnConsultar btn btn-success w-25 mt-3"> Enviar </button>
+                                </form>
+                            </section>
+                        </div>
+
+                        <h2 class="text-center pt-5">Perguntas Frequentes</h2>
+    
+                        <p>Encontre respostas para suas dúvidas sobre o aluguel de quadras.</p>
+    
+                        <div class="question" onclick="toggleAnswer(1)">
+                            Como faço para alugar uma quadra?
+                        </div>
+                        <div class="answer" id="answer1">
+                            <p>Para alugar uma quadra, siga as etapas abaixo:</p>
+                            <ol>
+                                <li>Visite nosso site e faça login na sua conta.</li>
+                                <li>Selecione a opção de aluguel de quadras.</li>
+                                <li>Escolha a data e o horário desejados para a reserva.</li>
+                                <li>Prossiga com o pagamento para confirmar a reserva.</li>
+                            </ol>
+                        </div>
+    
+                        <div class="question" onclick="toggleAnswer(2)">
+                            Qual é o custo do aluguel de quadras?
+                        </div>
+                        <div class="answer" id="answer2">
+                            <p>O custo do aluguel de quadras varia dependendo do tipo de quadra e da duração do aluguel.
+                                Entre em contato conosco para obter informações mais detalhadas sobre os preços.</p>
+                        </div>
+    
+                        <div class="question" onclick="toggleAnswer(3)">
+                            Posso cancelar minha reserva?
+                        </div>
+                        <div class="answer" id="answer3">
+                            <p>Sim, você pode cancelar sua reserva, mas a política de cancelamento pode variar. Entre em
+                                contato conosco o mais breve possível para obter informações sobre o cancelamento e
+                                reembolso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Carregar o cabeçalho
+            $.get('header.html', (data) => {
+                $('header').html(data);
+                $('.pagina').html(`<div class = "border-bottom border-secondary">
+                                        <h5><a class = "text-decoration-none text-dark" href="index.html">Home </a> / Ajuda</h5>
+                                    </div>`);
+            });
+
+            // Carregar o rodapé
+            $('footer').load('footer.html');
+        });
+
+        function toggleAnswer(id) {
+            var answer = document.getElementById('answer' + id);
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

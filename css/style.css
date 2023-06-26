@@ -1,0 +1,59 @@
+.logo {
+    width: 12%;
+}
+
+@media (max-width: 767px) {
+    .logo {
+        width: 150px; 
+    }
+}
+
+#msg {
+    max-height: 57px;
+  }
+  
+.custom-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.custom-carousel .carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.text-carrosel {
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+}
+
+.cards-quadras .row {
+    align-items: center;
+}
+
+.opcao {
+    text-align: center;
+}
+
+.img1-fluid {
+    width: 100px;
+}
+
+.custom-card {
+    width: 18rem;
+}
+
+.custom-footer {
+    padding: 20px;
+    margin-top: 20px; 
+    height: 60px;
+}
+
